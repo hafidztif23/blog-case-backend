@@ -15,7 +15,12 @@ exports.createPost = async (req, res) => {
 
 exports.getAllPosts = async (req, res) => {
   try {
-    const posts = await Post.findAll({ include: ["author"] });
+    const posts = await Post.findAll({
+      include: {
+        association: "author",
+        attributes: ["id", "name", "email"]
+      }
+    });
     res.json(posts);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -24,7 +29,12 @@ exports.getAllPosts = async (req, res) => {
 
 exports.getPostById = async (req, res) => {
   try {
-    const post = await Post.findByPk(req.params.id, { include: ["author"] });
+    const post = await Post.findByPk(req.params.id, {
+      include: {
+        association: "author",
+        attributes: ["id", "name", "email"]
+      }
+    });
     if (!post) return res.status(404).json({ message: "Post not found" });
 
     res.json(post);
