@@ -46,7 +46,7 @@ File .env disimpan di root
 JWT_SECRET=supersecretkey123
 ```
 
-Bisa juga ditambahkan config database
+Bisa juga ditambahkan config database, contoh:
 ```env
 DB_HOST=localhost
 DB_USER=root
@@ -58,10 +58,10 @@ DB_NAME=blog_db
 Sesuaikan `config/db.config.js`
 ```js
 module.exports = {
-  HOST: process.env.DB_HOST || "localhost",
-  USER: process.env.DB_USER || "root",
-  PASSWORD: process.env.DB_PASSWORD || "",
-  DB: process.env.DB_NAME || "blog_db",
+  HOST: process.env.DB_HOST,
+  USER: process.env.DB_USER,
+  PASSWORD: process.env.DB_PASSWORD,
+  DB: process.env.DB_NAME,
   dialect: "mysql"
 };
 ```
