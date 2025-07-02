@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
       <li><b>POST</b> /api/auth/register – Register user</li>
       <li><b>POST</b> /api/auth/login – Login user</li>
       <li><b>GET</b> /api/posts – Lihat semua post</li>
-      <li><b>GET</b> /api/posts/:id – Lihat post berdasarkan ID</li>
+      <li><b>GET</b> /api/posts/:id – Lihat post berdasarkan posts ID</li>
       <li><b>POST</b> /api/posts – Buat post (login required)</li>
       <li><b>PUT</b> /api/posts/:id – Update post (login & author only)</li>
       <li><b>DELETE</b> /api/posts/:id – Hapus post (login & author only)</li>
