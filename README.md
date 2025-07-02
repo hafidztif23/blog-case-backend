@@ -2,6 +2,8 @@
 
 RESTful API sederhana untuk mengelola blog post dan user authentication menggunakan **Node.js**, **Express**, **Sequelize**, dan **MySQL**.
 
+📄 [Dokumentasi API](https://gist.github.com/hafidztif23/1f286e9cd8b1e7ab77cda830fccad2af)
+
 ---
 
 ## Fitur
